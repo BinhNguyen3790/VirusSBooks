@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import url(DancingScript.css);
+* {
+  margin:0px;
+  padding:0px;
+}
+body {
+  background-image: url("../images/bg.jpg");
+  font-family: "Dancing Script", cursive !important;
+  header{
+
+  }
+  main{
+
+  }
+  footer{
+
+  }
+}
+
+.container{
+  .navbar{
+    .navbar-brand{
+      img{
+        height: 30px;
+      }
+    }
+  }
+  .content{
+
+  }
+  .footer{
+
+  }
+}
