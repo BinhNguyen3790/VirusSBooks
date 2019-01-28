@@ -76,7 +76,7 @@
       <div class="col-md-7 col-lg-8">
         <!--Copyright-->
         <p class="text-center text-md-left">© <?php echo date("Y")?> Copyright:
-          <a href="https://mdbootstrap.com/education/bootstrap/">
+          <a href="#">
             <strong> VirusS</strong>
           </a>
         </p>

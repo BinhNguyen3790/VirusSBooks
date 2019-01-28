@@ -6,7 +6,7 @@
  * Time: 3:47 PM
  */
 include ("dbconnect.php");
-$ct_sql = "SELECT * FROM category";
+$ct_sql = "SELECT * FROM categories";
 $ct_qry = mysqli_query($dbc, $ct_sql);
 $ct_rs = mysqli_fetch_assoc($ct_qry);
 ?>
@@ -68,11 +68,11 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
       </div>
       <div class="row">
         <?php
-        $st_sql = "SELECT * FROM stock WHERE categoryID=".$ct_rs['id']." ORDER BY date DESC LIMIT 3";
+        $st_sql = "SELECT * FROM stocks WHERE categoryID=".$ct_rs['id']." ORDER BY date DESC LIMIT 4";
         $st_qry = mysqli_query($dbc, $st_sql);
         $st_rs = mysqli_fetch_assoc($st_qry);
         do{?>
-          <div class="col-lg-4 text-center mb-5">
+          <div class="col-md-3 col-sm-6 text-center mb-5">
             <img class="rounded-circle" src="images/<?php echo $st_rs['thumbnail']?>" alt="Generic placeholder image" width="100" height="100">
             <h2><?php echo $st_rs['name']?></h2>
             <p><?php echo $st_rs['topline']?></p>

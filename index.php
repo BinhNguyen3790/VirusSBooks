@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/Chart.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/js.js"></script>
@@ -33,8 +34,14 @@
 <!--  End Header-->
 <!--  Begin Main-->
   <main>
-    <?php
-      include "content.php";
+    <?php // check to see if user is visithing a page other than the home page
+      if (!isset($_GET['page'])){
+        include "content.php";
+      }
+      else{
+        $page = $_GET['page'];
+        include "$page.php";
+      }
     ?>
   </main>
 <!--  End Main-->
