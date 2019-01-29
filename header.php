@@ -35,10 +35,10 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="index.php?page=contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="index.php?page=about">About</a>
         </li>
 <!--        --><?php
 //          if (isset($_SESSION['admin'])){ ?>

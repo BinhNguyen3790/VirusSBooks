@@ -38,7 +38,10 @@
                 Add New Category
                 <span class="badge badge-primary badge-pill float-right">12</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Secondary item</a>
+              <a href="index.php?page=selectcategorydelete" class="list-group-item list-group-item-secondary rounded-top">
+                Delete Category
+                <span class="badge badge-primary badge-pill float-right">12</span>
+              </a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
