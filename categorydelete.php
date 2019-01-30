@@ -14,7 +14,7 @@
 ?>
 
 <div class="container">
-  <div class="content col bg-light pb-4 pt-5">
+  <div class="content col bg-light pb-4 pt-5 text-center">
     <hr class="featurette-divider">
     <h1>Delete Category</h1>
     <?php
@@ -24,7 +24,7 @@
       $sk_qry = mysqli_query($dbc, $sk_sql);
     ?>
     <p>Category has successfully been deleted</p>
-    <p><a href="index.php?page=admin">Return to admin panel</a></p>
+    <p><a class="btn btn-danger" href="index.php?page=admin">Return to admin panel</a></p>
     <hr class="featurette-divider">
   </div>
 </div>

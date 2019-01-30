@@ -10,7 +10,7 @@
     header("Location:index.php");
   }
   // select all stock items belonging to the selected id
-  $st_sql = "SELECT stocks.name, stocks.thumbnail, stocks.id, categories.name AS ct_name 
+  $st_sql = "SELECT stocks.name, stocks.thumbnail, stocks.date, stocks.id, categories.name AS ct_name 
     FROM stocks JOIN categories ON stocks.categoryID=categories.id WHERE stocks.categoryID=".$_GET['id'];
   $st_qry = mysqli_query($dbc, $st_sql);
   $st_rs = mysqli_fetch_assoc($st_qry);
@@ -32,7 +32,7 @@
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $st_rs['name']?></h5>
                     <p class="card-text">This is a longer card with <supporting></supporting>.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text"><small class="text-muted"><?php echo date("d/m/Y", strtotime($st_rs['date']))?></small></p>
                   </div>
                 </div>
               </a>

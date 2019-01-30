@@ -12,6 +12,7 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
 ?>
 <div class="container">
   <div class="content col bg-light pb-4 pt-2">
+    <!-- Start Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide mt-5 mb-5" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -53,7 +54,7 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <!-- Three columns of text below the carousel -->
+    <!-- End Carousel -->
     <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
     <?php do{ ?>
@@ -76,7 +77,7 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
             <img class="rounded-circle" src="images/<?php echo $st_rs['thumbnail']?>" alt="Generic placeholder image" width="100" height="100">
             <h2><?php echo $st_rs['name']?></h2>
             <p><?php echo $st_rs['topline']?></p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
         <?php }while($st_rs = mysqli_fetch_assoc($st_qry)); ?>
       </div><!-- /.row -->

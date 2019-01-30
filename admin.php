@@ -42,15 +42,16 @@
                 Delete Category
                 <span class="badge badge-primary badge-pill float-right">12</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Warning item</a>
+              <a href="index.php?page=selectcategoryedit" class="list-group-item list-group-item-warning rounded-top">
+                Edit Category
+                <span class="badge badge-primary badge-pill float-right">12</span>
+              </a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
             </ul>
-            <div class="row">
-              <div class="col-md-12">
-                <table class="table table-hover table-dark mt-3">
+            <table class="table table-hover table-dark mt-3 table-responsive">
                   <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -99,8 +100,6 @@
                   </tr>
                   </tbody>
                 </table>
-              </div>
-            </div>
 <!--            <div class="row">-->
 <!--              <div class="col-md-6">-->
 <!--                <a href="#">-->

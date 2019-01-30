@@ -13,7 +13,7 @@
   }
 ?>
 <div class="container">
-  <div class="content col bg-light pb-4 pt-5">
+  <div class="content col bg-light pb-4 pt-5 text-center">
     <hr class="featurette-divider">
     <h1>Confirm Category To Delete</h1>
     <?php
@@ -28,16 +28,15 @@
     <p>
       <?php
         if ($ck_ct > 0){
-          echo "Warning! There are ". $ck_ct ." stock item(s) in this category. If you delete the category they will
-            also be removes from the database";
+          echo "Warning! There are <span class='text-danger'>". $ck_ct ." stock item(s)</span> 
+            in this category. If you delete the category they will also be removes from the database";
         }
       ?>
     </p>
-    <p>Do you really wish to delete <?php echo $ct_rs['name']?>?</p>
+    <p>Do you really wish to delete <span class="text-danger"><?php echo $ct_rs['name']?></span>?</p>
     <p>
-      <a href="index.php?page=categorydelete&id=<?php echo $_GET['id']?>">Yes, delete it!</a>
-      <a href="index.php?page=selectcategorydelete">No, Go Back</a>
-      <a href="index.php?page=admin">Back to admin panel</a>
+      <a class="btn btn-danger" href="index.php?page=selectcategorydelete">No, Go Back</a>
+      <a class="btn btn-success" href="index.php?page=categorydelete&id=<?php echo $_GET['id']?>">Yes, delete it!</a>
     </p>
     <hr class="featurette-divider">
   </div>

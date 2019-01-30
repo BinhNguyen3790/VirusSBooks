@@ -28,10 +28,11 @@
   unset($_SESSION['addcategory']['photo']);
   unset($_SESSION['addcategory']['description']);
 ?><div class="container">
-  <div class="content col bg-light pb-4 pt-5">
+  <div class="content col bg-light pb-4 pt-5 text-center">
     <hr class="featurette-divider">
-    <p>New Category Has Been Entered</p>
-    <p><a href="index.php?page=admin">Return to admin panel</a></p>
+    <h1>Add Category</h1>
+    <p>New category has been entered</p>
+    <p><a class="btn btn-danger" href="index.php?page=admin">Return to admin panel</a></p>
     <hr class="featurette-divider">
   </div>
 </div>
