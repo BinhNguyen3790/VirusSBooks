@@ -39,9 +39,9 @@
             </div>
           <?php }while($st_rs = mysqli_fetch_assoc($st_qry));?>
         </div>
-        <hr class="featurette-divider">
       <?php }
     ?>
+    <hr class="featurette-divider">
   </div>
 </div>
 

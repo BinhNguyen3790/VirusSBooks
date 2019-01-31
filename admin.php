@@ -46,7 +46,11 @@
                 Edit Category
                 <span class="badge badge-primary badge-pill float-right">12</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Danger item</a>
+              <h1>Item</h1>
+              <a href="index.php?page=addstock" class="list-group-item list-group-item-danger rounded-top">
+                Add New Item
+                <span class="badge badge-primary badge-pill float-right">12</span>
+              </a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
               <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
