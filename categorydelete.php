@@ -12,12 +12,23 @@
     header("Location:index.php?page=admin");
   }
 ?>
-
 <div class="container">
   <div class="content col bg-light pb-4 pt-5 text-center">
     <hr class="featurette-divider">
     <h1>Delete Category</h1>
     <?php
+      $cy_sql = "SELECT * FROM categories WHERE id=".$_GET['id'];
+      $cy_qry = mysqli_query($dbc, $cy_sql);
+      $cy_rs = mysqli_fetch_assoc($cy_qry);
+      $st_sql = "SELECT * FROM stocks WHERE categoryID=".$_GET['id'];
+      $st_qry = mysqli_query($dbc, $st_sql);
+      $st_rs = mysqli_fetch_assoc($st_qry);
+      if ($st_rs['bigphoto'] != "image.jpg" && $st_rs['bigphoto'] != ""){
+        unlink("images/".$st_rs['bigphoto']);
+      }
+      if ($cy_rs['photo'] != "image.jpg"){
+        unlink("images/".$cy_rs['photo']);
+      }
       $ct_sql = "DELETE FROM categories WHERE id=".$_GET['id'];
       $ct_qry = mysqli_query($dbc, $ct_sql);
       $sk_sql = "DELETE FROM stocks WHERE categoryID=".$_GET['id'];

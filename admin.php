@@ -14,6 +14,7 @@
     $lg_rs = mysqli_fetch_assoc($lg_qry);
     $_SESSION['admin'] = $lg_rs['name'];
   }
+  unset($_SESSION['addcategory']);
   // check to see if user is logging out
   if (isset($_GET['action'])){
     if ($_GET['action']=='logout'){
@@ -28,32 +29,31 @@
         <hr class="featurette-divider">
         <div class="row">
           <div class="col-md-5">
-            <ul class="list-group bg-dark text-light p-3 rounded">
+            <ul class="list-group bg-dark text-light p-3 rounded text-center">
               <h1>Admin Panel</h1>
-              <a href="index.php?page=admin&action=logout" class="list-group-item list-group-item-success rounded">
+              <a href="index.php?page=admin&action=logout" class="list-group-item list-group-item-danger rounded">
                 Logout
               </a>
               <h1>Category</h1>
-              <a href="index.php?page=addcategory" class="list-group-item list-group-item-info rounded-top">
+              <a href="index.php?page=addcategory" class="list-group-item list-group-item-success rounded-top">
                 Add New Category
-                <span class="badge badge-primary badge-pill float-right">12</span>
-              </a>
-              <a href="index.php?page=selectcategorydelete" class="list-group-item list-group-item-secondary rounded-top">
-                Delete Category
-                <span class="badge badge-primary badge-pill float-right">12</span>
               </a>
               <a href="index.php?page=selectcategoryedit" class="list-group-item list-group-item-warning rounded-top">
                 Edit Category
-                <span class="badge badge-primary badge-pill float-right">12</span>
+              </a>
+              <a href="index.php?page=selectcategorydelete" class="list-group-item list-group-item-danger rounded-top">
+                Delete Category
               </a>
               <h1>Item</h1>
-              <a href="index.php?page=addstock" class="list-group-item list-group-item-danger rounded-top">
+              <a href="index.php?page=addstock" class="list-group-item list-group-item-success rounded-top">
                 Add New Item
-                <span class="badge badge-primary badge-pill float-right">12</span>
               </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary item</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Dark item</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Light item</a>
+              <a href="index.php?page=selectstockedit" class="list-group-item list-group-item-warning rounded-top">
+                Edit Item
+              </a>
+              <a href="index.php?page=selectstockdelete" class="list-group-item list-group-item-danger rounded-top">
+                Delete Item
+              </a>
             </ul>
             <table class="table table-hover table-dark mt-3 table-responsive">
                   <thead>

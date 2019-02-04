@@ -11,7 +11,9 @@
     header("Location:index.php");
   }
   //set session to blank if user has just entered this page from the admin panel
-  if (!isset($_SESSION['addstock']['name']) && !isset($_SESSION['addstock']['categoryID']) && !isset($_SESSION['addstock']['price']) && !isset($_SESSION['addstock']['topline']) && !isset($_SESSION['addstock']['date'])
+  if (!isset($_SESSION['addstock']['name']) && !isset($_SESSION['addstock']['categoryID'])
+    && !isset($_SESSION['addstock']['price']) && !isset($_SESSION['addstock']['topline'])
+    && !isset($_SESSION['addstock']['date'])
     && !isset($_SESSION['addstock']['description'])){
     $_SESSION['addstock']['name'] = "";
     $_SESSION['addstock']['categoryID'] = "";
@@ -71,7 +73,6 @@
       <div class="form-group">
         <label for="exampleInputEmail1">Photo</label>
         <input type="file" name="fileToUpload" id="fileToUpload" class="form-control mb-2">
-<!--        <img class="img-fluid" src="images/--><?php //echo $_SESSION['addstock']['bigphoto']?><!--" alt="" width="200">-->
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>

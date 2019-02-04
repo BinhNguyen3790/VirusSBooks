@@ -10,8 +10,12 @@
   if (!isset($_SESSION['admin'])){
     header("Location:index.php");
   }
-  $ct_sql = "UPDATE categories SET name='".$_SESSION['categoryedit']['name']."', topline='".$_SESSION['categoryedit']['topline']."', 
-    date='".$_SESSION['categoryedit']['date']."', photo='".$_SESSION['categoryedit']['photo']."', description='".$_SESSION['categoryedit']['description']."' WHERE id=".$_SESSION['categoryedit']['id'];
+  $ct_sql = "UPDATE categories SET name='".$_SESSION['categoryedit']['name']."', 
+    topline='".$_SESSION['categoryedit']['topline']."', 
+    date='".$_SESSION['categoryedit']['date']."', 
+    photo='".$_SESSION['categoryedit']['photo']."', 
+    description='".$_SESSION['categoryedit']['description']."' 
+    WHERE id=".$_SESSION['categoryedit']['id'];
   $ct_qry = mysqli_query($dbc, $ct_sql);
   unset($_SESSION['categoryedit']);
 ?>

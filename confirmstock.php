@@ -45,6 +45,8 @@
         if (file_exists($target_file)) {
           echo "Sorry, file already exists.";
           $uploadOk = 0;
+          $_SESSION['addstock']['bigphoto'] = "image.jpg";
+          $_SESSION['addstock']['thumbnail'] = "image.jpg";
         }
         // Check file size
         if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -59,7 +61,7 @@
         }
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-          echo "Sorry, your file was not uploaded.";
+          echo " Sorry, your file was not uploaded. <span class='text-danger'>You still want to add</span>";
           // if everything is ok, try to upload file
         } else {
           if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) { ?>
@@ -97,10 +99,8 @@
           $ct_qry = mysqli_query($dbc, $ct_sql);
           $ct_rs = mysqli_fetch_assoc($ct_qry);
           echo $ct_rs['name'];
-          do{ ?>
-
-          <?php }while($ct_rs = mysqli_fetch_assoc($ct_qry));
-          ?></p>
+          ?>
+        </p>
         <p>Price: <?php echo $_SESSION['addstock']['price']?></p>
         <p>Date: <?php echo $_SESSION['addstock']['date']?></p>
         <p>Topline: <?php echo $_SESSION['addstock']['topline']?></p>

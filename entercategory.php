@@ -22,11 +22,7 @@
     '".mysqli_real_escape_string($dbc, $_SESSION['addcategory']['date'])."', '".mysqli_real_escape_string($dbc, $_SESSION['addcategory']['photo'])."', 
     '".mysqli_real_escape_string($dbc, $_SESSION['addcategory']['description'])."')";
   $ct_qry = mysqli_query($dbc, $ct_sql);
-  unset($_SESSION['addcategory']['name']);
-  unset($_SESSION['addcategory']['topline']);
-  unset($_SESSION['addcategory']['date']);
-  unset($_SESSION['addcategory']['photo']);
-  unset($_SESSION['addcategory']['description']);
+  unset($_SESSION['addcategory']);
 ?><div class="container">
   <div class="content col bg-light pb-4 pt-5 text-center">
     <hr class="featurette-divider">

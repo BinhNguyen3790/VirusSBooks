@@ -62,6 +62,7 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading"><?php echo $ct_rs['name']?> <span class="text-muted"><?php echo $ct_rs['topline']?></span></h2>
           <p class="lead"><?php echo $ct_rs['description']?></p>
+          <a class="btn btn-success" href="index.php?page=category&id=<?php echo $ct_rs['id']?>">View details »</a>
         </div>
         <div class="col-md-5 order-md-1">
           <img class="featurette-image img-fluid mb-5" data-src="holder.js/500x500/auto" style="width: 500px; height: 300px;" src="images/<?php echo $ct_rs['photo']?>" data-holder-rendered="true">
@@ -77,7 +78,7 @@ $ct_rs = mysqli_fetch_assoc($ct_qry);
             <img class="rounded-circle" src="images/<?php echo $st_rs['thumbnail']?>" alt="Generic placeholder image" width="100" height="100">
             <h2><?php echo $st_rs['name']?></h2>
             <p><?php echo $st_rs['topline']?></p>
-            <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-success" href="index.php?page=item&id=<?php echo $st_rs['id']?>" role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
         <?php }while($st_rs = mysqli_fetch_assoc($st_qry)); ?>
       </div><!-- /.row -->
