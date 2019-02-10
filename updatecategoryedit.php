@@ -10,6 +10,13 @@
   if (!isset($_SESSION['admin'])){
     header("Location:index.php");
   }
+  $ck_sql = "SELECT * FROM categories WHERE id =".$_SESSION['categoryedit']['id'];
+  $ck_qry = mysqli_query($dbc, $ck_sql);
+  $ck_rs = mysqli_fetch_assoc($ck_qry);
+  if ($_SESSION['categoryedit']['photo'] != $ck_rs['photo'] && $ck_rs['photo'] != "image.jpg"){
+    unlink("images/".$ck_rs['photo']);
+  }
+
   $ct_sql = "UPDATE categories SET name='".$_SESSION['categoryedit']['name']."', 
     topline='".$_SESSION['categoryedit']['topline']."', 
     date='".$_SESSION['categoryedit']['date']."', 

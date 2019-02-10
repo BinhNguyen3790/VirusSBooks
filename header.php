@@ -10,7 +10,7 @@
   $ct_qry = mysqli_query($dbc, $ct_sql);
   $ct_rs = mysqli_fetch_assoc($ct_qry);
 ?>
-<div class="container ">
+<div class="container fixed-top">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

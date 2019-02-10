@@ -50,8 +50,11 @@
       }
       // Check if $uploadOk is set to 0 by an error
       if ($uploadOk == 0) {
-        echo "Sorry, your image was not uploaded.<span class='text-danger'>You still want to add</span>";
-        $_SESSION['categoryedit']['photo'] = "image.jpg";
+        echo "<span class='text-danger'>You still want to add</span>";
+        $ck_sql = "SELECT * FROM categories WHERE id =".$_SESSION['categoryedit']['id'];
+        $ck_qry = mysqli_query($dbc, $ck_sql);
+        $ck_rs = mysqli_fetch_assoc($ck_qry);
+        $_SESSION['categoryedit']['photo'] = $ck_rs['photo'];
         // if everything is ok, try to upload file
       } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) { ?>

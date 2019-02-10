@@ -16,6 +16,13 @@
     <hr class="featurette-divider">
     <h1>Delete Category</h1>
     <?php
+    $sk_sql = "SELECT * FROM stocks WHERE id=".$_GET['id'];
+    $sk_qry = mysqli_query($dbc, $sk_sql);
+    $sk_rs = mysqli_fetch_assoc($sk_qry);
+    if ($sk_rs['bigphoto'] != "image.jpg" && $sk_rs['bigphoto'] != ""){
+      unlink("images/".$sk_rs['bigphoto']);
+//      unlink("images/".$sk_rs['thumbnail']);
+    }
     $st_sql = "DELETE FROM stocks WHERE id=".$_GET['id'];
     $st_qry = mysqli_query($dbc, $st_sql);
     ?>

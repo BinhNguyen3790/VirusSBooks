@@ -24,6 +24,7 @@
     $_SESSION['categoryedit']['date'] = $ct_rs['date'];
     $_SESSION['categoryedit']['photo'] = "image.jpg";
     $_SESSION['categoryedit']['description'] = $ct_rs['description'];
+    $_SESSION['categoryedit']['id'] = $ct_rs['id'];
   }else{
     if ($_SESSION['categoryedit']['photo'] != "image.jpg"){
       unlink("images/".$_SESSION['categoryedit']['photo']);
