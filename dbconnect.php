@@ -9,6 +9,7 @@
   $name = "mhccfxpsotauoa";
   $password = "b1161b2943861aa68636c64bea12b6eb9abe91559adfddeb75e5daf4847adcdd";
   $dbname = "d3cgrg8ca4irte";
-  $dbc = mysqli_connect($host, $name, $password, $dbname)
+  $port = "5432"
+  $dbc = mysqli_connect($host, $name, $password, $dbname, $port)
     or die("connect error:" . mysqli_connect_error());
 ?>
